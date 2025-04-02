@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album di Nozze</title>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .cover { width: 100%; height: 300px; object-fit: cover; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+        .gallery img { width: 200px; height: 200px; margin: 5px; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <h1>Benvenuti al nostro Matrimonio!</h1>
+    <img class="cover" src="cover.jpg" alt="Foto di Copertina">
+    <p>Caricate e visualizzate le foto scattate durante l'evento!</p>
+    
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Carica Foto</button>
+    <h2>Galleria</h2>
+    <div class="gallery" id="gallery"></div>
+</body>
+</html>
